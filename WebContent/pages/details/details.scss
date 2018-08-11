@@ -1,0 +1,73 @@
+page-details {
+    .content-top {
+        margin: 15px 0;
+        .tutor-left {
+            float: left;
+            width: 40%;
+            text-align: center;
+            img {
+                width: 7rem;
+                height: 7rem;
+                border-radius: 50%;
+                margin-top: .94rem;
+            }
+        }
+        .tutor-right {
+            float: left;
+            width: 60%;
+            line-height: 3rem;
+            color: #666;
+        }
+    }
+    .subjects-grade {
+        font-size: 1.6rem;
+        padding: 0 3rem;
+        .grade-detail {
+            display: inline-block;
+            width: 50%;
+            margin-bottom: 1.4rem;
+        }
+        .name {
+            display: inline-block;
+            width: 40%;
+        }
+        .grade {
+            display: inline-block;
+            width: 50%;
+            padding: 10px 0;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+    }
+    .list {
+        padding: 0 2rem;
+    }
+    .item {
+        width: 100%;
+        margin-bottom: 2rem;
+        box-shadow: 0 1px 5px 0 rgba(182, 182, 182, 0.5);
+        .item-row {
+            display: table-row;
+            .item-cell {
+                display: table-cell;
+                padding: .3rem 1rem;
+            }
+        }
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 0px;
+        padding: 0px 20px;
+        // border: 1px solid #e72c27;
+        border-top: 1px solid rgba(182, 182, 182, 0.5);
+        background: #fff;
+        color: #e72c27;
+        // background: #e72c27;
+        // color: #ffffff;
+        font-size: 1.6rem;
+        line-height: 4rem;
+        touch-action: manipulation;
+        text-align: center;
+    }
+}

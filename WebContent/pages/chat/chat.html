@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ toUser.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content>
+  <div class="main">
+    <ul class="chat-record" *ngFor="let record of records">
+      <li class="date" *ngIf="record.date">{{ record.date }}</li>
+      <li class="self clearfix" *ngIf="record.id == user.id">
+        <img class="fr" [src]="user.pic">
+        <p class="fr">{{ record.message }}<span class="status">{{ record.status }}</span></p>
+      </li>
+      <li class="other clearfix" *ngIf="record.id !== user.id">
+        <img class="fl" [src]="toUser.pic">
+        <p class="fl">{{ record.message }}<span class="status">{{ record.status }}</span></p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea rows="1" placeholder="请输入"></textarea>
+      <button (click)="sendMsg()">发送</button>
+    </div>
+  </div>
+</ion-content>

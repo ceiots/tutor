@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/assets/getChaterService.json=UTF-8
+encoding//WebContent/assets/getContactService.json=UTF-8
+encoding//WebContent/assets/getPartnerService.json=UTF-8
+encoding//WebContent/assets/getStudentListService.json=UTF-8
+encoding//WebContent/html/webSocket.html=UTF-8
+encoding//WebContent/html/webSocket2.html=UTF-8
+encoding//WebContent/pages/compass/compass.html=UTF-8
+encoding//src/log4j.properties=UTF-8
+encoding//src/ssm/controller/WebSocketController.java=UTF-8
+encoding/<project>=UTF-8

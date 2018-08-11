@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>排行榜</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content>
+  <div class="main">
+    <div class="partner-list clearfix">
+      <div class="partner" *ngFor="let partner of partners">
+        <div style="position: relative;padding-bottom: 100%">
+          <div class="pic" [style.background-image]="partner.pic"></div>
+        </div>
+        <div class="author clearfix">
+          <img [src]="partner.author">
+            <span class="name">{{partner.name}}发布</span>
+            <span class="votes fr">{{partner.votes}}票</span>
+          </div>
+      </div>
+    </div>
+    <div class="add-btn">
+      <ion-icon name="add"></ion-icon>
+    </div>
+  </div>
+</ion-content>
+  

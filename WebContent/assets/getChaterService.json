@@ -1,0 +1,14 @@
+{
+    "status": "success",
+    "message": "",
+    "errorCode": "",
+    "result": true,
+    "resultInfo": [
+        {"id": "", "pic": "../assets/imgs/jay.jpg", "name": "Jay", "lastWords": "周末，大热天的，出来星巴克写代码"},
+        {"id": "", "pic": "../assets/imgs/zhou.jpeg", "name": "周杰伦", "lastWords": "不知道是哪来的勇气"},
+        {"id": "", "pic": "../assets/imgs/zard.jpg", "name": "Zard", "lastWords": "好像有点聊不下去了"},
+        {"id": "", "pic": "../assets/imgs/banjing.jpg", "name": "板井", "lastWords": "想去欢乐谷，但是找不到人一起去。"},
+        {"id": "", "pic": "../assets/imgs/quanshui.jpg", "name": "泉水", "lastWords": "今天你都干了什么？"}
+    ]
+  }
+  

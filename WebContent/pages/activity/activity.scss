@@ -1,0 +1,68 @@
+page-activity {
+    .main {
+        margin: 0;
+    }
+    .partner-list {
+        .partner {
+            display: block;
+            margin-bottom: 1rem;
+            float: left;
+            width: calc(50% - 4px);
+            height: 24rem;
+            border: 1px solid #eee;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background: #fff;;
+            img {
+                width: 100%;
+            }
+            .author {
+                position: relative;
+                margin: 1rem 0;
+                img {
+                    margin: 0 .5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    vertical-align: bottom;
+                }
+                .name {
+                    display: inline-block;
+                    width: 7rem;
+                    text-align: left;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .votes {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 0;
+                    right: .5rem;
+                }
+            }
+        }
+        .partner:nth-child(odd) {
+            margin-right: 4px;
+        }
+        .partner:nth-child(even) {
+            margin-left: 4px;
+        }
+    }
+    .add-btn {
+        position: fixed;
+        left: 50%;
+        bottom: 3%;
+        font-size: 5rem;
+        font-weight: bold;
+        transform: translateX(-50%);
+    }
+    .pic {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.PartnerDao">
+<insert id="addPartner" parameterType="Partner" >
+  insert into partner(id,pic,author,name,votes) values(#{id}, #{pic}, #{author}, #{name}, #{votes})
+</insert>
+
+   <resultMap type="Partner" id="Partners">
+        <result property="id" column="id"/>
+        <result property="pic" column="pic"/>
+        <result property="author" column="author"/>
+        <result property="name" column="name"/>
+        <result property="votes" column="votes"/>
+    </resultMap>
+    <select id="findPartners" resultMap="Partners">
+        select id,pic,author,name,votes from partner
+    </select> 
+</mapper> 

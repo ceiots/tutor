@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>首页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <div class="view-scroll">
+      <ul class="tutor-list">
+        <li class="tutor" *ngFor="let item of stuItems">
+          <img class="filter-img" [src]="item.pic">
+          <a class="clearfix" (click)="goToDetails(item.id)">
+            <div class="tutor-left">
+              <img [src]="item.pic">
+            </div>
+            <div class="tutor-right">
+              <div class="name">姓名：{{ item.name }}</div>
+              <div class="school">学校：{{ item.university }}</div>
+              <div class="college">高考成绩：{{ item.grade }}分</div>
+            </div>
+            <div class="character-box">
+              <div class="like">
+                <ion-icon class="character-icon" name="star-outline"></ion-icon>
+              </div>
+              <!--<div class="add">
+                <ion-icon class="character-icon" name="add-circle"></ion-icon>
+              </div>-->
+              <div class="chat">
+                <ion-icon class="character-icon" name="chatbubbles"></ion-icon>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

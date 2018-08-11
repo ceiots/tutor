@@ -1,0 +1,42 @@
+page-news {
+    .main {
+        margin: 0 0 0 15px;
+    }
+    .list > .item-block {
+        border-top: 0.55px solid #c8c7cc;        
+    }
+    .list .item-block .item-inner {
+        padding-right: 0;
+        border-bottom: none;
+    }
+    .item > ion-icon, .item-inner > ion-icon {
+        line-height: 3.6rem;
+        font-size: 3.6rem;
+    }
+    .item > ion-icon:first-child, .item-inner > ion-icon:first-child {
+        min-width: 3.6rem;
+    }
+    .item ion-avatar ion-img, .item ion-avatar img {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+    ion-label{
+        position: relative;
+        .chat-details{
+            display: inline-block;
+            width: 75%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chat-date {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 25%;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+    }
+}

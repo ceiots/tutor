@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>个人详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main" style="margin: 0;">
+    <div class="content-top clearfix">
+      <div class="tutor-left">
+        <img [src]="item.pic">
+      </div>
+      <div class="tutor-right">
+        <div class="name">姓名：{{ item.name }}</div>
+        <div class="school">学校：{{ item.university }}</div>
+        <div class="college">高考成績：{{ item.grade }}分</div>
+      </div>
+    </div>
+    <div class="subjects-grade">
+      <div class="grade-detail" *ngFor="let subject of item.subjects">
+        <span class="name">{{ subject.name }}: </span><span class="grade">{{ subject.grade }}分</span></div>
+    </div>
+    <div class="list">
+      <div class="item">
+        <div class="item-row">
+          <div class="item-cell">科目</div>
+          <div class="item-cell">语文</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">日期</div>
+          <div class="item-cell">2018/07/28 ~ 2018/07/28</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">时间</div>
+          <div class="item-cell">19:00 ~ 21:00</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">费用</div>
+          <div class="item-cell">100/小时</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn">预订</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-row">
+          <div class="item-cell">科目</div>
+          <div class="item-cell">语文</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">日期</div>
+          <div class="item-cell">2018/07/28 ~ 2018/07/28</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">时间</div>
+          <div class="item-cell">19:00 ~ 21:00</div>
+        </div>
+        <div class="item-row">
+          <div class="item-cell">费用</div>
+          <div class="item-cell">100/小时</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn">预订</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

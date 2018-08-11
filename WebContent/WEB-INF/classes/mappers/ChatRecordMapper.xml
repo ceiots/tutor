@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.ChatRecordDao">
+<insert id="addChatRecord" parameterType="ChatRecord" >
+  insert into chatRecord (userId,toUserId,message,time,status) values (#{userId}, #{toUserId}, #{message}, #{time}, #{status})
+</insert>
+ 
+   <resultMap type="ChatRecord" id="ChatRecords">
+        <result property="userId" column="userId"/>
+        <result property="toUserId" column="toUserId"/>
+        <result property="message" column="message"/>
+        <result property="time" column="time"/>
+        <result property="status" column="status"/>
+    </resultMap>
+    <select id="findChatRecords" resultMap="ChatRecords">
+        select userId,toUserId,message,time,status from chatRecord
+    </select> 
+</mapper>  

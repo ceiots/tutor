@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>活动</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <div class="activity-list">
+      <div class="activity-item" (click)="goToActivity()">
+        <div class="item-main">
+          <img src="assets/imgs/img_one_3.png">
+          <div class="partner-box">
+            <a class="partner" *ngFor="let partner of partners">
+              <img [src]="partner.pic">
+            </a>
+            <a class="partner last">
+              <p>10</p>
+            </a>
+          </div>
+        </div>
+        <p class="title">Photography competition recruit volunteers</p>
+        <div class="wrapper clearfix">
+          <span class="fl">{{ startDate }} ~ {{ endDate }}</span>
+          <span class="count fr">15 peoples</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

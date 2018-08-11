@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java鍚庣WebSocket鐨凾omcat瀹炵幇</title>
+</head>
+<body>
+    Welcome, <b><span id="userId">13426559991</span></b><br/> 
+         姝ｅ湪涓� <b><span id="toUserId">15626550191</span></b> 鐨勫璇�<br/> 
+    <input id="text" type="text"/><br/>
+    <button onclick="send()">鍙戦�佹秷鎭�</button>
+    <hr/>
+    <button onclick="closeWebSocket()">鍏抽棴WebSocket杩炴帴</button>
+    <hr/>
+    <div id="message"></div>
+</body>
+
+<script type="text/javascript">
+    var websocket = null;
+    //鍒ゆ柇褰撳墠娴忚鍣ㄦ槸鍚︽敮鎸乄ebSocket
+    if ('WebSocket' in window) {
+     	var userId = document.getElementById('userId').innerText;
+        var toUser = document.getElementById('toUserId').innerText;
+      /*  var msgtext = document.getElementById('text').value;
+        var messageObj = {"userId":userId, "toUserId":toUserId, "msgtext":msgtext};
+        var messageJson = JSON.stringify(messageObj);
+        websocket.send(messageJson); */
+        websocket = new WebSocket("ws://localhost:8080/tutor/websocket/13426559991/15626550191");
+    }
+    else {
+        alert('褰撳墠娴忚鍣� Not support websocket')
+    }
+
+    //杩炴帴鍙戠敓閿欒鐨勫洖璋冩柟娉�
+    websocket.onerror = function () {
+        setMessageInnerHTML("WebSocket杩炴帴鍙戠敓閿欒");
+    };
+
+    //杩炴帴鎴愬姛寤虹珛鐨勫洖璋冩柟娉�
+    websocket.onopen = function () {
+        setMessageInnerHTML("WebSocket杩炴帴鎴愬姛");
+    }
+
+    //鎺ユ敹鍒版秷鎭殑鍥炶皟鏂规硶
+    websocket.onmessage = function (event) {
+        setMessageInnerHTML(event.data);
+    }
+
+    //杩炴帴鍏抽棴鐨勫洖璋冩柟娉�
+    websocket.onclose = function () {
+        setMessageInnerHTML("WebSocket杩炴帴鍏抽棴");
+    }
+
+    //鐩戝惉绐楀彛鍏抽棴浜嬩欢锛屽綋绐楀彛鍏抽棴鏃讹紝涓诲姩鍘诲叧闂瓀ebsocket杩炴帴锛岄槻姝㈣繛鎺ヨ繕娌℃柇寮�灏卞叧闂獥鍙ｏ紝server绔細鎶涘紓甯搞��
+    window.onbeforeunload = function () {
+        closeWebSocket();
+    }
+
+    //灏嗘秷鎭樉绀哄湪缃戦〉涓�
+    function setMessageInnerHTML(innerHTML) {
+        document.getElementById('message').innerHTML += innerHTML + '<br/>';
+    }
+
+    //鍏抽棴WebSocket杩炴帴
+    function closeWebSocket() {
+        websocket.close();
+    }
+
+    //鍙戦�佹秷鎭�
+    function send() {
+    	//var userId = document.getElementById('userId').innerText;
+        //var toUserId = document.getElementById('toUserId').innerText;
+        var msgtext = document.getElementById('text').value;
+       // var messageObj = {"userId":userId, "toUserId":toUserId, "msgtext":msgtext};
+       // var messageJson = JSON.stringify(messageObj);
+        websocket.send(msgtext);
+    }
+</script>
+</html>

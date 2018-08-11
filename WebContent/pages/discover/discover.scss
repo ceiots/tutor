@@ -1,0 +1,58 @@
+page-discover {
+    .activity-list {
+        margin-top: 15px;
+    }
+    .activity-item {
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1px 5px 0 rgba(182, 182, 182, 0.5);
+        .item-main {
+            position: relative;
+            top: 0;
+            left: 0;
+            .partner-box {
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+                .partner {
+                    display: inline-block;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    overflow: hidden;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .partner:not(:first-child) {
+                    margin-left: -2.5rem;
+                }
+                .partner.last {
+                    color: #fff;
+                    font-size: 2rem;
+                    font-style: italic;
+                    text-align: center;
+                    background-color: green;
+                    p {
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .title {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.6rem;
+        }
+        .wrapper {
+            padding: 0 10px 10px 10px;
+            color: #666;
+        }
+    }
+}
