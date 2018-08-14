@@ -4,10 +4,10 @@
   "errorCode": "",
   "result": true,
   "resultInfo": [
-      {"id": "", "pic": "../assets/imgs/jay.jpg", "name": "Jay", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "grade": 720.5},
-      {"id": "", "pic": "../assets/imgs/zhou.jpeg", "name": "周杰伦", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "grade": 720.5},
-      {"id": "", "pic": "../assets/imgs/zard.jpg", "name": "Zard", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "grade": 720.5},
-      {"id": "", "pic": "../assets/imgs/banjing.jpg", "name": "板井", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "grade": 720.5},
-      {"id": "", "pic": "../assets/imgs/quanshui.jpg", "name": "泉水", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "grade": 720.5}
+      {"id": "", "pic": "../assets/imgs/jay.jpg", "name": "Jay", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "fraction": 720.5},
+      {"id": "", "pic": "../assets/imgs/zhou.jpeg", "name": "周杰伦", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "fraction": 720.5},
+      {"id": "", "pic": "../assets/imgs/zard.jpg", "name": "Zard", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "fraction": 720.5},
+      {"id": "", "pic": "../assets/imgs/banjing.jpg", "name": "板井", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "fraction": 720.5},
+      {"id": "", "pic": "../assets/imgs/quanshui.jpg", "name": "泉水", "university": "北京理工大学珠海学院", "college": "计算机学院", "profession": "软件工程", "fraction": 720.5}
   ]
 }

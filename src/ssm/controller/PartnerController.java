@@ -1,9 +1,9 @@
 package ssm.controller;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +24,8 @@ public class PartnerController {
    // @CrossOrigin(origins = {"http://localhost:8100", "null"}) 
     @RequestMapping(value = "/getPartnerService", method = RequestMethod.POST)
     @ResponseBody
-    public JsonToWeb getStudentListService(@RequestParam("id") String id,
+    public JsonToWeb getStudentListService(HttpServletResponse response,
+    										@RequestParam("id") String id,
 								    		@RequestParam("pic") String pic,
 								    		@RequestParam("author") String author,
 								    		@RequestParam("name") String name,
@@ -35,7 +36,7 @@ public class PartnerController {
     	partnerService.addPartner(partner);
     	
         List<Partner> partnerList = partnerService.findPartners();
-        JsonToWeb jsonToWeb = new JsonToWeb("success","",200,true,partnerList);
+        JsonToWeb jsonToWeb = new JsonToWeb("success","",response.getStatus(),true,partnerList);
         System.out.println("jsonToWeb:"+jsonToWeb);
         return jsonToWeb;
     }

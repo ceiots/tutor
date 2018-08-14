@@ -10,14 +10,19 @@ public class Student {
 	    private String university; 
 	    private String college; 
 	    private String profession; 
-	    private BigDecimal fraction;
+	    private BigDecimal totalFraction; //总分
+	    private BigDecimal Chinese;//语文
+	    private BigDecimal Maths;
+	    private BigDecimal English;
+	    private BigDecimal Comprehensives; //综合
 	    
 	    public Student(){
 	    	
 	    }
 	    
 		public Student(String id, String pic, String name, String university, String college, String profession,
-				BigDecimal fraction) {
+				BigDecimal totalFraction, BigDecimal chinese, BigDecimal maths, BigDecimal english,
+				BigDecimal comprehensives) {
 			super();
 			this.id = id;
 			this.pic = pic;
@@ -25,8 +30,15 @@ public class Student {
 			this.university = university;
 			this.college = college;
 			this.profession = profession;
-			this.fraction = fraction;
+			this.totalFraction = totalFraction;
+			Chinese = chinese;
+			Maths = maths;
+			English = english;
+			Comprehensives = comprehensives;
 		}
+
+
+
 		public String getId() {
 			return id;
 		}
@@ -63,15 +75,56 @@ public class Student {
 		public void setProfession(String profession) {
 			this.profession = profession;
 		}
-		public BigDecimal getFraction() {
-			return fraction;
+		
+		public BigDecimal getTotalFraction() {
+			return totalFraction;
 		}
-		public void setFraction(BigDecimal fraction) {
-			this.fraction = fraction;
+
+		public void setTotalFraction(BigDecimal totalFraction) {
+			this.totalFraction = totalFraction;
 		}
+
+		public BigDecimal getChinese() {
+			return Chinese;
+		}
+
+		public void setChinese(BigDecimal chinese) {
+			Chinese = chinese;
+		}
+
+		public BigDecimal getMaths() {
+			return Maths;
+		}
+
+		public void setMaths(BigDecimal maths) {
+			Maths = maths;
+		}
+
+		public BigDecimal getEnglish() {
+			return English;
+		}
+
+		public void setEnglish(BigDecimal english) {
+			English = english;
+		}
+
+		public BigDecimal getComprehensives() {
+			return Comprehensives;
+		}
+
+		public void setComprehensives(BigDecimal comprehensives) {
+			Comprehensives = comprehensives;
+		}
+
 		@Override
 		public String toString() {
-			return "Student [id: " + id + ", pic: " + pic + ", name: " + name + ", university: " + university + ", college: "
-					+ college + ", profession: " + profession + ", fraction: " + fraction + "]";
+			return "[id: " + id + ", pic: " + pic + ", name: " + name + ", university: " + university + ", college: "
+					+ college + ", profession: " + profession + ", totalFraction: " + totalFraction + ", subjects: ["
+					+ "{name: 语文, fraction: " + Chinese + "},"
+					+ "{name: 数学, fraction: " + Maths + "},"
+					+ "{name: 英语, fraction: " + English + "},"
+					+ "{name: 综合, fraction: " + Comprehensives + "}"
+					+ "]";
 		} 
-}
+} 
+

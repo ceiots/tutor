@@ -63,7 +63,7 @@ public class Partner {
 
 	@Override
 	public String toString() {
-		return "Partner [id:" + id + ", pic:" + pic + ", author:" + author + ", name:" + name + ", votes:" + votes
+		return " [id:" + id + ", pic:" + pic + ", author:" + author + ", name:" + name + ", votes:" + votes
 				+ "]";
 	}
 	

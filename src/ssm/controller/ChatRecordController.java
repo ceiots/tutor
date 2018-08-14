@@ -1,16 +1,18 @@
 package ssm.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import ssm.entity.ChatRecord;
 import ssm.entity.JsonToWeb;
-import ssm.entity.Student;
 import ssm.service.ChatRecordService;
-import ssm.service.StudentService;
-import javax.annotation.Resource;
-
-import java.util.List;
 
 @Controller
 public class ChatRecordController {
@@ -23,16 +25,11 @@ public class ChatRecordController {
 	// @CrossOrigin(origins = {"http://localhost:8100", "null"})
 	@RequestMapping(value = "/getChatRecordService", method = RequestMethod.POST)
 	@ResponseBody
-	public JsonToWeb getChatRecordService(@RequestParam("userId")Object userId) {
-
-		System.out.println("testParam:"+userId.toString());
-		//Student student = new Student(id, pic, name, university, college, profession, fraction);
-		//studentService.addStudent(student);
+	public JsonToWeb getChatRecordService(HttpServletResponse response) {
 
 		List<ChatRecord> chatRecordList = chatRecordService.findChatRecords();
 		
-		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", 200, true, chatRecordList);
+		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, chatRecordList);
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}

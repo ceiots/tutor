@@ -7,6 +7,8 @@ import ssm.entity.Chater;
 import ssm.entity.JsonToWeb;
 import ssm.service.ChaterService;
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
 import java.util.List;
 
 @Controller
@@ -18,7 +20,7 @@ public class ChaterController {
    // @CrossOrigin(origins = {"http://localhost:8100", "null"}) 
     @RequestMapping(value = "/getChaterService", method = RequestMethod.POST)
     @ResponseBody
-    public JsonToWeb getChaterListService(/*@RequestParam("id") String id,
+    public JsonToWeb getChaterListService(HttpServletResponse response/*@RequestParam("id") String id,
 								    	   @RequestParam("pic") String pic,
 								    	   @RequestParam("name") String name,
 								    	   @RequestParam("lastWords") String lastWords*/ ) {
@@ -27,7 +29,7 @@ public class ChaterController {
     	chaterService.addChater(chater);*/
     	
         List<Chater> chaterList = chaterService.findChaters();
-        JsonToWeb jsonToWeb = new JsonToWeb("success","",200,true,chaterList);
+        JsonToWeb jsonToWeb = new JsonToWeb("success","",response.getStatus(),true,chaterList);
         System.out.println("jsonToWeb:"+jsonToWeb);
         return jsonToWeb;
     }

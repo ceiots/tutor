@@ -51,7 +51,7 @@ public class Chater {
 
 	@Override
 	public String toString() {
-		return "Chater [id:" + id + ", pic:" + pic + ", name:" + name + ", lastWords:" + lastWords + "]";
+		return " [id:" + id + ", pic:" + pic + ", name:" + name + ", lastWords:" + lastWords + "]";
 	}
 	
 }

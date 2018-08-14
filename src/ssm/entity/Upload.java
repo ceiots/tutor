@@ -68,7 +68,7 @@ public class Upload {
 
 		@Override
 		public String toString() {
-			return "Picture [userId: " + userId + ", photo1: " + photo1 + ", photo2: " + photo2 + ", photo3: " + photo3 
+			return " [userId: " + userId + ", photo1: " + photo1 + ", photo2: " + photo2 + ", photo3: " + photo3 
 					+ " , video1: " + video1 + " , video2: " + video2 + " , video3: " + video3 + "]";
 		} 
 }

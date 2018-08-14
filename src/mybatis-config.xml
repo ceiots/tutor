@@ -14,5 +14,9 @@
         <typeAlias alias="Partner" type="ssm.entity.Partner" /> 
         <typeAlias alias="Chater" type="ssm.entity.Chater" /> 
         <typeAlias alias="ChatRecord" type="ssm.entity.ChatRecord" /> 
+        <typeAlias alias="Subject" type="ssm.entity.Subject" /> 
+        <typeAlias alias="Grades" type="ssm.entity.Grades" /> 
+        <typeAlias alias="Orders" type="ssm.entity.Orders" /> 
+        <typeAlias alias="PersonalCenter" type="ssm.entity.PersonalCenter" />  
     </typeAliases>
 </configuration>

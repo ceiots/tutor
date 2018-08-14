@@ -1,7 +1,6 @@
 package ssm.entity;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class Message {
 
@@ -66,6 +65,6 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "message [userId: " + userId + ", toUserId: " + toUserId + ", msgText: " + msgText + ", status: " + status + ", createTime: " + createTime + "]";
+		return " [userId: " + userId + ", toUserId: " + toUserId + ", msgText: " + msgText + ", status: " + status + ", createTime: " + createTime + "]";
 	}
 }

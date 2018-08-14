@@ -83,7 +83,7 @@ public class ChatRecord {
 
 		@Override
 		public String toString() {
-			return "ChatRecord [userId: " + userId + ", toUserId: " + toUserId + ", message: " + message 
+			return " [userId: " + userId + ", toUserId: " + toUserId + ", message: " + message 
 					+ " , time: " + time + " , stauts: " + status + "]";
 		} 
 }

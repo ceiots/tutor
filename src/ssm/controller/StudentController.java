@@ -1,16 +1,19 @@
 package ssm.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import ssm.entity.JsonToWeb;
 import ssm.entity.Student;
 import ssm.service.StudentService;
-import javax.annotation.Resource;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 @Controller
 public class StudentController {
@@ -22,41 +25,29 @@ public class StudentController {
 	// @CrossOrigin(origins = {"http://localhost:8100", "null"})
 	@RequestMapping(value = "/getStudentListService", method = RequestMethod.POST)
 	@ResponseBody
-	public JsonToWeb getStudentListService(/*@RequestParam("userId")String userId*/) {
-
+	public JsonToWeb getStudentListService(HttpServletResponse response/*@RequestParam("userId")String userId*/) {
 		//System.out.println("testParam:"+userId); 
-		//Student student = new Student(id, pic, name, university, college, profession, fraction);
+		//Student student = new Student(id, pic, name, university, college, profession, totalFraction,Chinese,Maths,English,Comprehensives);
 		//studentService.addStudent(student);
 
 		List<Student> studentList = studentService.findStudents();
 		logger.debug("test"+studentList);
 		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", 200, true, studentList);
+		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, studentList.toString());
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}
-	/*
-	 * public JsonToWeb getStudentListService(@RequestParam("id") String id,
-	 * 
-	 * @RequestParam("pic") String pic,
-	 * 
-	 * @RequestParam("name") String name,
-	 * 
-	 * @RequestParam("university") String university,
-	 * 
-	 * @RequestParam("college") String college,
-	 * 
-	 * @RequestParam("profession") String profession,
-	 * 
-	 * @RequestParam("grage") BigDecimal fraction) {
-	 * 
-	 * Student student = new
-	 * Student(id,pic,name,university,college,profession,fraction);
-	 * studentService.addStudent(student);
-	 * 
-	 * List<Student> studentList = studentService.findStudents(); JsonToWeb
-	 * jsonToWeb = new JsonToWeb("Success","",200,true,studentList);
-	 * System.out.println("jsonToWeb:"+jsonToWeb); return jsonToWeb; }
-	 */
 
+	
+	@RequestMapping(value = "/getStudentListServiceTest", method = RequestMethod.GET)
+	@ResponseBody
+	public JsonToWeb getStudentListServiceTest(HttpServletResponse response) {
+		System.out.println("status"+response.getStatus());
+
+		List<Student> studentList = studentService.findStudents();
+		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, studentList.toString());
+		System.out.println("jsonToWeb:" + jsonToWeb);
+		return jsonToWeb;
+	}
+	
 }
