@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.PersonalCenterDao">
+    <resultMap type="PersonalCenter" id="PersonalCenters">
+        <result property="identification" column="identification"/>
+        <result property="showToParent" column="showToParent"/>
+    </resultMap>
+
+    <select id="findPersonalCenters" resultMap="PersonalCenters">
+        select identification,showToParent from PersonalCenter 
+    </select>
+   
+  <!--   <insert id="addPersonalCenter" parameterType="PersonalCenter">
+       insert into PersonalCenter (identification,showToParent) values (#{identification},#{showToParent})
+    </insert> -->
+   
+</mapper> 

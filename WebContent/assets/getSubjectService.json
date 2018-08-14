@@ -1,0 +1,13 @@
+{
+    "status": "success",
+    "message": "",
+    "errorCode": "",
+    "result": true,
+    "resultInfo": [
+        {"grade": "初中","subject": "语文","startDate": "2018/07/08","endDate": "2018/07/28","startTime": "19:00","endTime": "21:00","fee": "100"},
+        {"grade": "初中","subject": "数学","startDate": "2018/07/08","endDate": "2018/07/28","startTime": "19:00","endTime": "21:00","fee": "100"},
+        {"grade": "高中","subject": "语文","startDate": "2018/07/08","endDate": "2018/07/28","startTime": "19:00","endTime": "21:00","fee": "200"},
+        {"grade": "高中","subject": "数学","startDate": "2018/07/08","endDate": "2018/07/28","startTime": "19:00","endTime": "21:00","fee": "200"}
+    ]
+  }
+  

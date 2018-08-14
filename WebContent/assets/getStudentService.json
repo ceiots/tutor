@@ -1,0 +1,21 @@
+{
+    "status": "success",
+    "message": "",
+    "errorCode": "",
+    "result": true,
+    "resultInfo": {
+        "id": "",
+        "pic": "../assets/imgs/jay.jpg",
+        "name": "Jay",
+        "university": "北京理工大学珠海学院",
+        "college": "计算机学院",
+        "profession": "软件工程",
+        "totalFraction": "720.5",
+        "subjects": [
+            {"name": "语文", "fraction": "148.5"},
+            {"name": "数学", "fraction": "150"},
+            {"name": "英语", "fraction": "136"},
+            {"name": "理综", "fraction": "286"}
+        ]
+    }
+}
