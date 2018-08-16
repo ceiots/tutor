@@ -27,9 +27,12 @@ public class ChaterController {
     	
     	/*Chater chater = new Chater(id,pic,name,lastWords);
     	chaterService.addChater(chater);*/
-    	
         List<Chater> chaterList = chaterService.findChaters();
-        JsonToWeb jsonToWeb = new JsonToWeb("success","",response.getStatus(),true,chaterList);
+    	String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+        JsonToWeb jsonToWeb = new JsonToWeb(result,"",response.getStatus(),true,chaterList);
         System.out.println("jsonToWeb:"+jsonToWeb);
         return jsonToWeb;
     }

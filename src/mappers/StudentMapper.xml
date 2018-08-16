@@ -2,23 +2,29 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="ssm.dao.OrdersDao">
-    <resultMap type="Orders" id="OrdersResult">
-        <result property="orderNum" column="orderNum"/>
-        <result property="orderStatus" column="orderStatus"/>
-        <result property="createTime" column="createTime"/>
-        <result property="finishTime" column="finishTime"/>
-        <result property="tutorName" column="tutorName"/>
-        <result property="parentName" column="parentName"/>
+<mapper namespace="ssm.dao.StudentDao">
+    <resultMap type="Student" id="StudentResult">
+        <result property="id" column="id"/>
+        <result property="pic" column="pic"/>
+        <result property="name" column="name"/>
+        <result property="university" column="university"/>
+        <result property="college" column="college"/>
+        <result property="profession" column="profession"/>
+        <result property="totalFraction" column="totalFraction"/>
+        <result property="Chinese" column="Chinese"/>
+        <result property="Maths" column="Maths"/>
+        <result property="English" column="English"/>
+        <result property="scienceComprehensives" column="scienceComprehensives"/>
+        <result property="artsComprehensive" column="artsComprehensive"/>
     </resultMap>
 
-    <select id="findOrders" resultMap="OrdersResult">
-        select orderNum,orderStatus,createTime,finishTime,tutorName,parentName from Orders
+    <select id="findStudents" resultMap="StudentResult">
+        select id,pic,name,university,college,profession,totalFraction,Chinese,Maths,English,scienceComprehensives,artsComprehensive from student limit 7
     </select>
    
-    <!-- <insert id="addStudent" parameterType="Student">
-       insert into student (id,pic,name,university,college,profession,totalFraction,Chinese,Maths,English,Comprehensives) 
-       values (#{id},#{pic},#{name},#{university},#{college},#{profession},#{totalFraction},#{Chinese},#{Maths},#{English},#{Comprehensives})
-    </insert> -->
+    <insert id="addStudent" parameterType="Student">
+       insert into student (id,pic,name,university,college,profession,totalFraction,Chinese,Maths,English,scienceComprehensives,artsComprehensive) 
+       values (#{id},#{pic},#{name},#{university},#{college},#{profession},#{totalFraction},#{Chinese},#{Maths},#{English},#{scienceComprehensives},#{artsComprehensive})
+    </insert>
    
 </mapper> 

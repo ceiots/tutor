@@ -28,8 +28,11 @@ public class ChatRecordController {
 	public JsonToWeb getChatRecordService(HttpServletResponse response) {
 
 		List<ChatRecord> chatRecordList = chatRecordService.findChatRecords();
-		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, chatRecordList);
+		String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, chatRecordList);
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}

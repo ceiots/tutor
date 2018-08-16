@@ -32,8 +32,11 @@ public class StudentController {
 
 		List<Student> studentList = studentService.findStudents();
 		logger.debug("test"+studentList);
-		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, studentList.toString());
+		String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, studentList.toString());
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}

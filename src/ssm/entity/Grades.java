@@ -1,6 +1,7 @@
 package ssm.entity;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Grades {
     
@@ -50,9 +51,9 @@ public class Grades {
 	}
 
 
-	@Override
+	/*@Override
 	public String toString() {
 		return " [id:" + id
 				+ "]";
-	}
+	}*/
 }

@@ -14,15 +14,15 @@ public class Student {
 	    private BigDecimal Chinese;//语文
 	    private BigDecimal Maths;
 	    private BigDecimal English;
-	    private BigDecimal Comprehensives; //综合
-	    
+	    private BigDecimal scienceComprehensives; //理综合
+	    private BigDecimal artsComprehensive;   //文综  
 	    public Student(){
 	    	
 	    }
 	    
 		public Student(String id, String pic, String name, String university, String college, String profession,
 				BigDecimal totalFraction, BigDecimal chinese, BigDecimal maths, BigDecimal english,
-				BigDecimal comprehensives) {
+				BigDecimal scienceComprehensives,BigDecimal artsComprehensive) {
 			super();
 			this.id = id;
 			this.pic = pic;
@@ -31,10 +31,11 @@ public class Student {
 			this.college = college;
 			this.profession = profession;
 			this.totalFraction = totalFraction;
-			Chinese = chinese;
-			Maths = maths;
-			English = english;
-			Comprehensives = comprehensives;
+			this.Chinese = chinese;
+			this.Maths = maths;
+			this.English = english;
+			this.scienceComprehensives = scienceComprehensives;
+			this.artsComprehensive = artsComprehensive;
 		}
 
 
@@ -107,13 +108,19 @@ public class Student {
 		public void setEnglish(BigDecimal english) {
 			English = english;
 		}
-
-		public BigDecimal getComprehensives() {
-			return Comprehensives;
+		
+	
+		public void setScienceComprehensives(BigDecimal scienceComprehensives) {
+			this.scienceComprehensives = scienceComprehensives;
 		}
-
-		public void setComprehensives(BigDecimal comprehensives) {
-			Comprehensives = comprehensives;
+		public BigDecimal getScienceComprehensives() {
+			return scienceComprehensives;
+		}
+		public void setArtsComprehensive(BigDecimal artsComprehensive) {
+			this.artsComprehensive = artsComprehensive;
+		}
+		public BigDecimal getArtsComprehensive() {
+			return artsComprehensive;
 		}
 
 		@Override
@@ -123,7 +130,8 @@ public class Student {
 					+ "{name: 语文, fraction: " + Chinese + "},"
 					+ "{name: 数学, fraction: " + Maths + "},"
 					+ "{name: 英语, fraction: " + English + "},"
-					+ "{name: 综合, fraction: " + Comprehensives + "}"
+					+ "{name: 理综, fraction: " + scienceComprehensives + "}"
+					+ "{name: 文综, fraction: " + artsComprehensive + "}"
 					+ "]";
 		} 
 } 

@@ -2,7 +2,6 @@ package ssm.controller;
 
 import java.util.List;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -23,10 +22,16 @@ public class GradesController {
 	@ResponseBody
 	public JsonToWeb getGradesService(HttpServletResponse response/*@RequestParam("userId")String userId*/) {
 		List<Grades> gradesList = gradesService.findGrades();
+		//
 		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, gradesList);
+		//ArrayList<HashMap<String,BigDecimal>> detailInfoMap = new ArrayList<HashMap<String,BigDecimal>>();
+		String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, gradesList);
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}
-
+   
 }

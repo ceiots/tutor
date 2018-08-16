@@ -36,7 +36,11 @@ public class PartnerController {
     	partnerService.addPartner(partner);
     	
         List<Partner> partnerList = partnerService.findPartners();
-        JsonToWeb jsonToWeb = new JsonToWeb("success","",response.getStatus(),true,partnerList);
+    	String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+        JsonToWeb jsonToWeb = new JsonToWeb(result,"",response.getStatus(),true,partnerList);
         System.out.println("jsonToWeb:"+jsonToWeb);
         return jsonToWeb;
     }

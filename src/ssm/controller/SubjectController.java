@@ -23,8 +23,11 @@ public class SubjectController {
 	public JsonToWeb getStudentListService(HttpServletResponse response/*@RequestParam("userId")String userId*/) {
 
 		List<Subject> subjectList = subjectService.findSubjects();
-		
-		JsonToWeb jsonToWeb = new JsonToWeb("success", "", response.getStatus(), true, subjectList);
+		String result = "success";
+		if(200!=response.getStatus()){
+			result = "false";
+		}
+		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, subjectList);
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}
