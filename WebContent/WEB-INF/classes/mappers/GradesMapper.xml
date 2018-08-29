@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.GradesDao">
+    <resultMap type="Grades" id="GradesResult">
+        <result property="id" column="id"/>
+        <result property="subject" column="subject"/>
+        <result property="time" column="time"/>
+        <result property="score" column="score"/>
+    </resultMap>
+
+    <select id="findGrades" resultMap="GradesResult">
+        select id, subject,time,score from grades 
+    </select>
+   
+    <!-- <insert id="addSubject" parameterType="Subject">
+       insert into subject (id,grade,subject,startDate,endDate,startTime,endTime,fee) values (#{id},#{grade},#{subject},#{startDate},#{endDate},#{startTime},#{endTime},#{fee})
+    </insert> -->
+   
+</mapper> 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.UploadDao">
+<insert id="uploadPhoto" parameterType="Upload" >
+  insert into upload(userId, photo1) values(#{userId}, #{photo1})
+</insert>
+<insert id="uploadVideo">
+  insert into upload(userId, video1) values(#{userId}, #{video1})
+</insert>
+
+   <resultMap type="Upload" id="uploadResult">
+        <result property="userId" column="userId"/>
+        <result property="photo1" column="photo1"/>
+        <result property="photo2" column="photo2"/>
+        <result property="photo3" column="photo3"/>
+        <result property="video1" column="video1"/>
+        <result property="video2" column="video2"/>
+        <result property="video3" column="video3"/>
+    </resultMap>
+    <select id="findUpload" resultMap="uploadResult">
+        select userId,photo1,photo2,photo3,video1,video2,video3 from upload
+    </select> 
+</mapper> 

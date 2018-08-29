@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.dao.ChaterDao">
+<insert id="uploadPhoto" parameterType="Upload" >
+  insert into chater values(#{id}, #{pic}, #{name}, #{lastWords})
+</insert>
+sdafsd 
+   <resultMap type="Chater" id="Chaters">
+        <result property="id" column="id"/>
+        <result property="pic" column="pic"/>
+        <result property="name" column="name"/>
+        <result property="lastWords" column="lastWords"/>
+    </resultMap>
+    <select id="findChaters" resultMap="Chaters">
+        select id,pic,name,lastWords from chater
+    </select> 
+</mapper> 

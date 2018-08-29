@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 别名 -->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="Student" type="ssm.entity.Student" />
+        <typeAlias alias="Upload" type="ssm.entity.Upload" />
+        <typeAlias alias="Message" type="ssm.entity.Message" /> 
+        <typeAlias alias="Partner" type="ssm.entity.Partner" /> 
+        <typeAlias alias="Chater" type="ssm.entity.Chater" /> 
+        <typeAlias alias="ChatRecord" type="ssm.entity.ChatRecord" /> 
+        <typeAlias alias="Subject" type="ssm.entity.Subject" /> 
+        <typeAlias alias="Grades" type="ssm.entity.Grades" /> 
+        <typeAlias alias="Orders" type="ssm.entity.Orders" /> 
+        <typeAlias alias="PersonalCenter" type="ssm.entity.PersonalCenter" />  
+    </typeAliases>
+</configuration>
