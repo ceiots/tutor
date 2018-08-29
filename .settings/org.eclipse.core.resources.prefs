@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/assets/getBlogListService.json=UTF-8
 encoding//WebContent/assets/getChatRecordService.json=UTF-8
 encoding//WebContent/assets/getChaterService.json=UTF-8
 encoding//WebContent/assets/getGradesService.json=UTF-8
@@ -6,6 +7,7 @@ encoding//WebContent/assets/getPartnerService.json=UTF-8
 encoding//WebContent/assets/getStudentListService.json=UTF-8
 encoding//WebContent/assets/getStudentService.json=UTF-8
 encoding//WebContent/assets/getSubjectService.json=UTF-8
+encoding//WebContent/html/test.jsp=UTF-8
 encoding//WebContent/html/webSocket.html=UTF-8
 encoding//WebContent/html/webSocket2.html=UTF-8
 encoding//WebContent/pages/compass/compass.html=UTF-8

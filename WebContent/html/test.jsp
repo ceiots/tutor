@@ -14,10 +14,11 @@
             $.ajax({
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
-                url: "student/getStudentListService",//url
+                url: "http://47.107.77.126:8080/tutor/getStudentListService",//url
                 data: $('#form1').serialize(),
                 success: function (result) {
-                        window.location.href = "http://localhost:8080/jiajiao/student/getStudentListService";
+                	    alert("success:"+result);
+                        window.location.href = "success.html";
                 },
                 error: function () {
                     alert("异常！");

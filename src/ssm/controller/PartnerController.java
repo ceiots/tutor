@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ssm.entity.JsonToWeb;
 import ssm.entity.Partner;
+import ssm.pojo.JsonToWeb;
 import ssm.service.PartnerService;
 
 @Controller

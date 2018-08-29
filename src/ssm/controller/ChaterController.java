@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import ssm.entity.Chater;
-import ssm.entity.JsonToWeb;
+import ssm.pojo.JsonToWeb;
 import ssm.service.ChaterService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -36,5 +36,5 @@ public class ChaterController {
         System.out.println("jsonToWeb:"+jsonToWeb);
         return jsonToWeb;
     }
-   
+    
 }

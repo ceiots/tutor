@@ -14,7 +14,7 @@ public class Student {
 	    private BigDecimal Chinese;//语文
 	    private BigDecimal Maths;
 	    private BigDecimal English;
-	    private BigDecimal scienceComprehensives; //理综合
+	    private BigDecimal scienceComprehensive; //理综合
 	    private BigDecimal artsComprehensive;   //文综  
 	    public Student(){
 	    	
@@ -22,7 +22,7 @@ public class Student {
 	    
 		public Student(String id, String pic, String name, String university, String college, String profession,
 				BigDecimal totalFraction, BigDecimal chinese, BigDecimal maths, BigDecimal english,
-				BigDecimal scienceComprehensives,BigDecimal artsComprehensive) {
+				BigDecimal scienceComprehensive,BigDecimal artsComprehensive) {
 			super();
 			this.id = id;
 			this.pic = pic;
@@ -34,7 +34,7 @@ public class Student {
 			this.Chinese = chinese;
 			this.Maths = maths;
 			this.English = english;
-			this.scienceComprehensives = scienceComprehensives;
+			this.scienceComprehensive = scienceComprehensive;
 			this.artsComprehensive = artsComprehensive;
 		}
 
@@ -110,11 +110,11 @@ public class Student {
 		}
 		
 	
-		public void setScienceComprehensives(BigDecimal scienceComprehensives) {
-			this.scienceComprehensives = scienceComprehensives;
+		public void setScienceComprehensives(BigDecimal scienceComprehensive) {
+			this.scienceComprehensive = scienceComprehensive;
 		}
-		public BigDecimal getScienceComprehensives() {
-			return scienceComprehensives;
+		public BigDecimal getScienceComprehensive() {
+			return scienceComprehensive;
 		}
 		public void setArtsComprehensive(BigDecimal artsComprehensive) {
 			this.artsComprehensive = artsComprehensive;
@@ -125,14 +125,14 @@ public class Student {
 
 		@Override
 		public String toString() {
-			return "[id: " + id + ", pic: " + pic + ", name: " + name + ", university: " + university + ", college: "
+			return "{id: " + id + ", pic: " + pic + ", name: " + name + ", university: " + university + ", college: "
 					+ college + ", profession: " + profession + ", totalFraction: " + totalFraction + ", subjects: ["
 					+ "{name: 语文, fraction: " + Chinese + "},"
 					+ "{name: 数学, fraction: " + Maths + "},"
 					+ "{name: 英语, fraction: " + English + "},"
-					+ "{name: 理综, fraction: " + scienceComprehensives + "}"
+					+ "{name: 理综, fraction: " + scienceComprehensive + "}"
 					+ "{name: 文综, fraction: " + artsComprehensive + "}"
-					+ "]";
+					+ "]}";
 		} 
 } 
 

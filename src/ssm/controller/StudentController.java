@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ssm.entity.JsonToWeb;
 import ssm.entity.Student;
+import ssm.pojo.JsonToWeb;
 import ssm.service.StudentService;
 
 @Controller
@@ -36,7 +36,7 @@ public class StudentController {
 		if(200!=response.getStatus()){
 			result = "false";
 		}
-		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, studentList.toString());
+		JsonToWeb jsonToWeb = new JsonToWeb(result, "", response.getStatus(), true, studentList);
 		System.out.println("jsonToWeb:" + jsonToWeb);
 		return jsonToWeb;
 	}

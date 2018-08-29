@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import ssm.entity.ChatRecord;
-import ssm.entity.JsonToWeb;
+import ssm.pojo.JsonToWeb;
 import ssm.service.ChatRecordService;
 
 @Controller
